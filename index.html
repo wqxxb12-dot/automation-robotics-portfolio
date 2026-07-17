@@ -1,21 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Industrial Robotics &amp; Automation Portfolio</title>
+</head>
+<body style="margin:0;background:#f7f8fa;">
 <div id="industrial-robotics-portfolio" class="portfolio-shell">
   <style>
     #industrial-robotics-portfolio {
-      --ink: #111827;
-      --muted: #667085;
-      --line: #e5e7eb;
-      --paper: #f7f8fa;
-      --white: #ffffff;
-      --orange: #f97316;
-      --orange-soft: #fff1e8;
-      color: var(--ink);
-      background: var(--paper);
+      --ink: #111827; --muted: #667085; --line: #e5e7eb; --paper: #f7f8fa;
+      --white: #ffffff; --orange: #f97316; --orange-soft: #fff1e8;
+      color: var(--ink); background: var(--paper);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: var(--font-size-base, 16px);
-      line-height: 1.5;
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 32px 24px 48px;
+      font-size: 16px; line-height: 1.5; max-width: 1080px; margin: 0 auto; padding: 32px 24px 48px;
     }
     #industrial-robotics-portfolio * { box-sizing: border-box; }
     #industrial-robotics-portfolio .topline { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; border-bottom:1px solid var(--line); padding-bottom:22px; }
@@ -31,8 +29,9 @@
     #industrial-robotics-portfolio .section-head { display:flex; justify-content:space-between; align-items:baseline; gap:18px; margin-bottom:14px; }
     #industrial-robotics-portfolio .section-note { color:var(--muted); font-size:13px; }
     #industrial-robotics-portfolio .feature { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr); gap:24px; align-items:stretch; }
-    #industrial-robotics-portfolio video, #industrial-robotics-portfolio img { width:100%; display:block; object-fit:cover; border-radius:8px; background:#dfe3e8; }
-    #industrial-robotics-portfolio .hero-video { aspect-ratio:16/9; }
+    #industrial-robotics-portfolio iframe, #industrial-robotics-portfolio img { width:100%; display:block; border:0; border-radius:8px; background:#dfe3e8; }
+    #industrial-robotics-portfolio img { object-fit:cover; }
+    #industrial-robotics-portfolio .video-frame { aspect-ratio:16/9; }
     #industrial-robotics-portfolio .feature-copy { padding:4px 0; display:flex; flex-direction:column; justify-content:space-between; gap:22px; }
     #industrial-robotics-portfolio .project-kicker { color:var(--orange); font-size:12px; text-transform:uppercase; letter-spacing:.12em; }
     #industrial-robotics-portfolio .feature-copy h3 { font-size:27px; line-height:1.1; margin-top:7px; }
@@ -43,7 +42,7 @@
     #industrial-robotics-portfolio .tag { border:1px solid #d9dde3; border-radius:999px; padding:4px 9px; font-size:12px; color:#4b5563; background:var(--white); }
     #industrial-robotics-portfolio .support-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
     #industrial-robotics-portfolio .support-item { border-top:1px solid var(--line); padding-top:14px; }
-    #industrial-robotics-portfolio .support-item video { aspect-ratio:16/9; margin-bottom:12px; }
+    #industrial-robotics-portfolio .support-item iframe { margin-bottom:12px; }
     #industrial-robotics-portfolio .abb { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,.95fr); gap:24px; align-items:center; border-top:1px solid var(--line); padding-top:14px; }
     #industrial-robotics-portfolio .abb img { aspect-ratio:16/10; }
     #industrial-robotics-portfolio .abb-copy { padding:5px 0; }
@@ -60,18 +59,14 @@
   </style>
 
   <header class="topline">
-    <div>
-      <div class="eyebrow">Selected work · 2026</div>
-      <h1>Industrial Robotics<br>&amp; Automation</h1>
-      <p class="intro">A focused selection of robotic manipulation, engineering visualization, and industrial robot simulation projects.</p>
-    </div>
-    <div class="contact"><span>BIngyue Lin</span><span>wqxxb12@gmail.com</span><span>15159638476</span></div>
+    <div><div class="eyebrow">Selected work · 2026</div><h1>Industrial Robotics<br>&amp; Automation</h1><p class="intro">A focused selection of robotic manipulation, engineering visualization, and industrial robot simulation projects.</p></div>
+    <div class="contact"><span>Bingyue Lin</span><span>wqxxb12@gmail.com</span><span>15159638476</span></div>
   </header>
 
   <section aria-labelledby="featured-title">
     <div class="section-head"><h2 id="featured-title">01 / Featured project</h2><span class="section-note">Physical robotic system</span></div>
     <div class="feature">
-      <video class="hero-video" controls preload="metadata" aria-label="xArm6 robotic system running video" src="file:///G:\我的云端硬盘\automation-robotics-portfolio\ros_xarm6\xarm实物运行.mp4"></video>
+      <iframe class="video-frame" src="https://drive.google.com/file/d/1Sa0EIj0DxTsOtK9jRT5Kf3hOoQ9FjBJT/preview" title="xArm6 robotic system running video" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
       <div class="feature-copy">
         <div><div class="project-kicker">Robotic manipulation</div><h3>xArm6 Pick-and-Place System</h3><p>Practical robotic system project focused on motion control, object manipulation, and operation testing.</p><ul><li>Implemented and tested pick-and-place motion sequences.</li><li>Integrated robot movement with object handling tasks.</li><li>Documented system behaviour through physical experiments.</li></ul></div>
         <div class="tag-row"><span class="tag">xArm6</span><span class="tag">Robot Control</span><span class="tag">Pick &amp; Place</span><span class="tag">Testing</span></div>
@@ -82,18 +77,20 @@
   <section aria-labelledby="visual-title">
     <div class="section-head"><h2 id="visual-title">02 / Engineering visualization</h2><span class="section-note">CAD · animation · communication</span></div>
     <div class="support-grid">
-      <article class="support-item"><video controls preload="metadata" aria-label="SolidWorks engineering animation one" src="file:///G:\我的云端硬盘\automation-robotics-portfolio\SOLIDWORKS\sw渲染1.mp4"></video><h3>SolidWorks Mechanical Animation</h3><p class="section-note">3D modelling and rendered motion sequence for engineering communication.</p></article>
-      <article class="support-item"><video controls preload="metadata" aria-label="SolidWorks engineering animation two" src="file:///G:\我的云端硬盘\automation-robotics-portfolio\SOLIDWORKS\sw渲染2.mp4"></video><h3>SolidWorks Assembly Visualization</h3><p class="section-note">Assembly presentation and visual explanation of mechanical operation.</p></article>
+      <article class="support-item"><iframe class="video-frame" src="https://drive.google.com/file/d/142VK3VFAFAfibNLz51R9F3nbUDQyWUZf/preview" title="SolidWorks engineering animation one" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe><h3>SolidWorks Mechanical Animation</h3><p class="section-note">3D modelling and rendered motion sequence for engineering communication.</p></article>
+      <article class="support-item"><iframe class="video-frame" src="https://drive.google.com/file/d/1pkD7NRFSLK3Cl7lARLG86yzAVKaVSo8C/preview" title="SolidWorks engineering animation two" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe><h3>SolidWorks Assembly Visualization</h3><p class="section-note">Assembly presentation and visual explanation of mechanical operation.</p></article>
     </div>
   </section>
 
   <section aria-labelledby="simulation-title">
     <div class="section-head"><h2 id="simulation-title">03 / Industrial robot simulation</h2><span class="section-note">ABB RobotStudio</span></div>
     <div class="abb">
-      <img src="file:///G:\我的云端硬盘\automation-robotics-portfolio\robotstudio\abb.png" alt="ABB RobotStudio conveyor workcell with robot path" />
+      <img src="https://drive.google.com/thumbnail?id=1-9MXmxIwGoFmthftRDLqlSb7AViI8y2-&amp;sz=w1600" alt="ABB RobotStudio conveyor workcell with robot path" loading="lazy">
       <div class="abb-copy"><div class="project-kicker">Basic offline programming</div><h3>Conveyor Pick-and-Place Simulation</h3><p>Created a basic RobotStudio workcell with a conveyor and end effector, then verified robot path planning and motion sequence feasibility in simulation.</p><div class="tag-row" style="margin-top:16px"><span class="tag">RobotStudio</span><span class="tag">Conveyor</span><span class="tag">Offline Programming</span></div></div>
     </div>
   </section>
 
   <footer class="footer"><span><span class="accent">01</span> Robotics · <span class="accent">02</span> Visualization · <span class="accent">03</span> Simulation</span><span>Available for graduate / internship opportunities</span></footer>
 </div>
+</body>
+</html>
